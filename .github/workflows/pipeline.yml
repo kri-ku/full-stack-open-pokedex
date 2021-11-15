@@ -21,6 +21,7 @@ jobs:
           healthcheck: "https://limitless-anchorage-19102.herokuapp.com/health"
           checkstring: "ok"
           delay: 5
+          rollbackonhealthcheckfailed: true
       - name: npm install
         run: npm install
       - name: lint
