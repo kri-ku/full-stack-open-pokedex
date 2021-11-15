@@ -5,6 +5,7 @@ const PokemonList = ({ pokemonList }) => {
   return (
     <div className="list-container">
       <h1>PokemonList</h1>
+      <p>fancy</p>
       {pokemonList.map(({ id, name }) => (
         <Link id={name} key={id} to={`/pokemon/${name}`} className="list-item" style={{ backgroundImage: `url(${`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`})` }}>
           <div
