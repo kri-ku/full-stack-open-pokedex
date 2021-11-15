@@ -1,1 +1,1 @@
-web: kissa
+web: npm run start-prod
