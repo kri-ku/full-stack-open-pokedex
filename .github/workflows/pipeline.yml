@@ -17,15 +17,15 @@ jobs:
         with:
           node-version: '12.x'
       if: ${{ github.event_name == 'push' }}:
-        - uses: akhileshns/heroku-deploy@v3.12.12
-          with:
-            heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-            heroku_app_name: "limitless-anchorage-19102"
-            heroku_email: "kristiinakumila@myy.haaga-helia.fi"
-            healthcheck: "https://limitless-anchorage-19102.herokuapp.com/health"
-            checkstring: "ok"
-            delay: 5
-            rollbackonhealthcheckfailed: true
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "limitless-anchorage-19102"
+          heroku_email: "kristiinakumila@myy.haaga-helia.fi"
+          healthcheck: "https://limitless-anchorage-19102.herokuapp.com/health"
+          checkstring: "ok"
+          delay: 5
+          rollbackonhealthcheckfailed: true
       - name: npm install
         run: npm install
       - name: lint
