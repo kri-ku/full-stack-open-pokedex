@@ -5,6 +5,7 @@ module.exports = {
         "browser": true,
         "es6": true,
         "jest/globals": true,
+        "cypress/globals": true
     },
     "extends": [
         "eslint:recommended",
