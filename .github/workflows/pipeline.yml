@@ -20,6 +20,7 @@ jobs:
           heroku_email: "kristiinakumila@myy.haaga-helia.fi"
           healthcheck: "https://limitless-anchorage-19102.herokuapp.com/health"
           checkstring: "ok"
+          delay: 5
       - name: npm install
         run: npm install
       - name: lint
