@@ -1,12 +1,12 @@
 # https://github.com/marketplace/actions/url-health-check
 name: health check
-on:
-  push:
-    branches:
-      - master
 #on:
-#  schedule:
-#    - cron: ''
+#  push:
+#    branches:
+#      - master
+on:
+  schedule:
+    - cron: '20-40 * * * *'
 jobs:
   health_check:
     runs-on: ubuntu-18.04
