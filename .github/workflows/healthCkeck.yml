@@ -1,0 +1,17 @@
+# https://github.com/marketplace/actions/url-health-check
+name: health check
+on:
+  push:
+    branches:
+      - master
+#on:
+#  schedule:
+#    - cron: ''
+steps:
+  - name: Check the deployed service URL
+    uses: jtalk/url-health-check-action@v2
+    with:
+      url: https://limitless-anchorage-19102.herokuapp.com/
+      max-attempts: 3
+      retry-delay: 5s
+      retry-all: no
