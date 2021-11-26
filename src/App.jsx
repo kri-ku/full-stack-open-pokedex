@@ -14,7 +14,7 @@ const mapResults = (({ results }) => results.map(({ url, name }) => ({
 
 const App = () => {
   const { data: pokemonList, error, isLoading } = useApi('https://pokeapi.co/api/v2/pokemon/?limit=784', mapResults)
-  const crash = data[9999999999]
+  //const crash = data[9999999999]
   if (isLoading) {
     return <LoadingSpinner />
   }
