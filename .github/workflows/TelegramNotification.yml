@@ -1,5 +1,11 @@
+# todo:
+#A success indication if a new version gets deployed
+#An error indication if a build fails
 name: telegram message
-on: [push]
+on:
+  push:
+    branches: 
+      - master
 jobs:
 
   build:
@@ -11,9 +17,9 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: |
-            ${{ github.actor }} created commit:
-            Commit message: ${{ github.event.commits[0].message }}
-            
-            Repository: ${{ github.repository }}
-            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+        #  message: |
+        #    ${{ github.actor }} created commit:
+        #    Commit message: ${{ github.event.commits[0].message }}
+        #   
+        #    Repository: ${{ github.repository }}
+        #   See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
